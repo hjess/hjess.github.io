@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <title>Resume of Howard Jess</title>
-  <style type="text/css">
+  <style>
     body {
       background-color:#fff;
     }
@@ -52,7 +52,7 @@
     }
     .info.info2 {
       display:none;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
     .strong {
       font-weight:bold;
@@ -63,7 +63,9 @@
     .job {
       margin:10px 0 24px;
     }
-    .jobID,.jobDate, .jobName {
+    .jobID,
+    .jobDate,
+    .jobName {
       display:block;
     }
     .jobID {
@@ -71,14 +73,17 @@
     }
     #jobLSI .jobID { display: inline }
     #jobLSI .jobID span { font-weight:normal }
-    .jobName em {
+    .job .jobName em {
       font-size:90%;
       font-weight:normal;
     }
-    .jobName {
+    .job h2,
+    .job .jobName {
+      border-bottom: none;
+      font-size: 1.1em;
       font-weight:bold;
     }
-    .jobName .note {
+    .job .jobName .note {
       font-size:85%;
       font-weight:100;
     }
@@ -133,21 +138,21 @@
 </head>
 <body>
 <div id="resume">
-  <div class="info">
+  <section class="info">
     <h1>Howard Jess</h1>
     <h3>Web Application UI/UX Developer</h3>
     <a class="emailAddress local">hjess<!-- no spam -->@<!-- spam not -->mail.<span>com</span><!-- --></a>
     <br>
     <a target="blank" href="https://www.linkedin.com/in/howardjess/">linkedin.com/in/hjess</a>
     <br>
-    
+
     <a href="tel:2064129924">206.412.9924</a>
-  </div>
+  </section>
 
   <div class="content">
     <h2>Brief</h2>
     <p>
-      I really enjoy working in a small collaborative team environment; after many experiences in desktop applications, system programming, and networking infrastructure, I settled into web application UI development as an interesting intersection of them all. I'm especially interested in user experience, elegant design, and accessibility.
+      I thrive and excel in a collaborative team environment; after many experiences in desktop applications, system programming, and networking infrastructure, I settled into web application UI development as an interesting intersection of them all. I'm especially interested in user experience, elegant design, and accessibility.
     </p>
 
     <h2>Skills</h2>
@@ -177,16 +182,17 @@
       </dd>
       <dt>Technologies:</dt>
       <dd>
-        <a href="https://vuejs.org/">Vue.js</a>,
         <a href="https://getbootstrap.com">Bootstrap</a>,
         <a href="https://element.eleme.io/#/en-US">Element UI</a>,
         <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core.html">DOM</a>,
         <a href="http://en.wikipedia.org/wiki/Http">HTTP</a>,
         <a href="http://en.wikipedia.org/wiki/Internationalization_and_localization">i18n</a>/<a href="http://en.wikipedia.org/wiki/Language_localisation">l10n</a>,
         <a href="http://jquery.com">jQuery</a>,
+        <a href="https://knockoutjs.com/">Knockout</a>,
         <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC</a>,
         <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST</a>,
         <a href="http://en.wikipedia.org/wiki/Tcp/ip">TCP/IP</a>,
+        <a href="https://vuejs.org/">Vue.js</a>
       </dd>
       <dt>Development:</dt>
       <dd>
@@ -199,12 +205,12 @@
     <h2>Experience</h2>
     <div id="exp1" class="experience">
 
-      <div class="job" id="jobTrupanion">
-        <span class="jobName"><a href="http://trupanion.com">Trupanion</a></span>
+      <section class="job" id="jobTrupanion">
+        <h2><span class="jobName"><a href="http://trupanion.com">Trupanion</a></span></h2>
         <span class="jobID">Front-end Web Application Developer</span>
         <span class="jobDate">April 2017 &rarr; June 2023</span>
         <span class="jobSkills">Javascript, Typescript, Vue, SCSS, CSS, Bootstrap, HTML, Razor (C# templates), SignalR, ASP.Net, Git</span>
-        <p>Projects</p>
+        <p>Brought in as Trupanion's first UI specialist. Projects</p>
         <ul>
           <li><a href="http://members.trupanion.com">Member Portal</a> (lead UI dev): provides customer access to their account. VanillaJS/Typescript/jQuery/Vue, Sass</li>
           <li><a href="http://trupanion.com">Website 3.0</a> (UI team member): main public-facing website; part of a rewrite team. VanillaJS/jQuery, Sass, Sitecore</li>
@@ -213,55 +219,57 @@
           <li>Partner Portal (sole UI dev): allows State Farm agents to create &amp; manage their portfolio of Trupanion policies. Vue</li>
           <li>Agent Reassignment Tool (sole UI dev): allow State Farm managers to manage policy re-distribution among agents. Vue</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="job" id="jobNavigatingCancer">
-        <span class="jobName"><a href="http://www.navigatingcancer.com">Navigating Cancer</a> <span class="note">(contract position)</span></span>
+      <section class="job" id="jobNavigatingCancer">
+        <h2><span class="jobName"><a href="http://www.navigatingcancer.com">Navigating Cancer</a> <span class="note">(contract position)</span></span></h2>
         <span class="jobID">Front-end Web Application Developer</span>
         <span class="jobDate">June 2016 &rarr; February 2017</span>
         <span class="jobSkills">Bootstrap, Coffeescript, Backbone.js, HAML, JSON Schema, JSON Editor, Mocha, Ruby on Rails, SASS</span>
         <p>
           Developer for Navigating Cancer's suite of Patient Care Management software, dedicated to improving and streamlining the relationship and care experience for cancer
-          patients and oncology clinics. Achievements and projects completed include:</p>
+          patients and oncology clinics. Projects:</p>
         <ul>
           <li>Complex Triage Pathways: implemented a set of <a href="https://json-schema.org/">JSON Schema</a>+<a href="https://github.com/json-editor/json-editor">JSON Editor</a>-based dynamic forms to standardize symptom data recording for cancer patients</li>
           <li><a href="https://livingstyleguide.org/">Living Style Guide</a>: continued work to maintain and upgrade the development group's style and component library</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="info info2">
+      <section class="info info2">
         <h1>Howard Jess</h1>
-        <h3>Web Application Software Developer/Engineer</h3>
+        <h3>Web Application UI/UX Developer</h3>
         <a class="emailAddress local">hjess<!-- no spam -->@<!-- spam not -->mail.<span>com</span><!-- --></a>
         <br>
-        206.412.9924
-      </div>
+        <a target="blank" href="https://www.linkedin.com/in/howardjess/">linkedin.com/in/hjess</a>
+        <br>
+        <a href="tel:2064129924">206.412.9924</a>
+      </section>
 
-      <div class="job" id="jobRosettaStone">
-        <span class="jobName"><a href="http://www.rosettastone.com">Rosetta Stone</a> <span class="note">(after April 2013 Livemocha aquisition)</span></span>
+      <section class="job" id="jobRosettaStone">
+          <h2><span class="jobName"><a href="http://www.rosettastone.com">Rosetta Stone</a> <span class="note">(acquired <b>Livemocha</b> in April 2013)</span></span></h2>
         <span class="jobID">Front-end Web Application Developer</span>
         <span class="jobDate">November 2012 &rarr; April 2016</span>
         <span class="jobSkills">AngularJS, CouchDB, HTML, Javascript, Mixpanel, SCSS, Sproutcore</span>
         <p>
           Developer for Rosetta Stone's <a href="https://advancedenglish.rosettastone.com/">Advanced English for Business</a> language-learning application, and <a href="http://www.livemocha.com">Livemocha</a>, a social community-based language-learning application.
-          Achievements and projects completed include:</p>
+          Projects:</p>
         <ul>
           <li>Password reset/recovery</li>
           <li>User profile management</li>
           <li>Partner connections</li>
           <li>Analytics, using <a href="http://www.mixpanel.com/">Mixpanel Analytics</a></li>
-          <li>System rewrite from <a href="http://sproutcore.com/">Sproutcore</a> to <a href="https://angularjs.org/">AngularJS</a>.</li>
+          <li>Full language-learning engine (a <em><a href="https://en.wikipedia.org/wiki/Single-page_application">SPA</a></em>) rewrite from <a href="http://sproutcore.com/">Sproutcore</a> to <a href="https://angularjs.org/">AngularJS</a>.</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="job" id="jobOptify">
-        <span class="jobName"><a href="http://www.optify.net">Optify, Inc.</a></span>
+      <section class="job" id="jobOptify">
+        <h2><span class="jobName"><a href="http://www.optify.net">Optify, Inc.</a></span></h2>
         <span class="jobID">Front-end Software Engineer</span>
         <span class="jobDate">September 2011 &rarr; October 2012</span>
         <span class="jobSkills">Backbone.js, HTML, Javascript, LESS, Mixpanel</span>
         <p>
           UI developer for Optify's <em>Inbound Marketing</em> software suite, a <em><a href="http://en.wikipedia.org/wiki/Software_as_a_service">SAAS</a></em> tool for B2B marketers.
-          Achievements and projects completed include:</p>
+          Projects:
         </p>
         <ul>
           <li>Customer site &ldquo;Landing Page&rdquo; editor/publisher</li>
@@ -269,17 +277,17 @@
           <li>Analytics, using <a href="http://www.mixpanel.com/">Mixpanel Analytics</a></li>
           <li>Rewrote UI coding standards document, and overhauled the Javascript library namespace</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="job" id="jobCobalt">
-        <span class="jobName"><a href="http://www.cobalt.com">Cobalt.com, Inc.</a></span>
+      <section class="job" id="jobCobalt">
+        <h2><span class="jobName"><a href="http://www.cobalt.com">Cobalt.com, Inc.</a></span></h2>
         <span class="jobID">Senior UI Developer</span>
         <span class="jobDate">September 2009 &rarr; September 2011</span>
         <p>
           Lead UI developer on Cobalt's <em>New Products</em> team, charged with creating
           and delivering innovative website products for sale to auto manufacturers and
           dealers.
-          Achievements and projects completed include:
+          Projects:
         </p>
         <ul>
           <li>Embedded <a href="http://code.google.com/apis/maps/">Google maps</a> for location pages</li>
@@ -289,61 +297,61 @@
           <li>Embedded <a href="http://code.google.com/apis/youtube/overview.html">YouTube</a> player/playlist handler</li>
           <li>Initial implementation of front-end unit testing using <a href="http://code.google.com/p/js-test-driver/">jstestdriver</a></li>
         </ul>
-      </div>
-
-
-      <div class="job" id="jobWetpaint">
-        <span class="jobName"><a href="https://web.archive.org/web/20090719200629/http://www.wetpaint.com/">Wetpaint.com, Inc.</a></span>
-        <span class="jobID">UI Web Developer</span>
-        <span class="jobDate">September 2008 &rarr; July 2009</span>
-        <p>
-          UI developer for Wetpaint's &ldquo;<em>build your own wiki</em>&rdquo; system.
-          Achievements and projects completed include:
-        </p>
-        <ul>
-          <li>Enhanced messaging forum system</li>
-          <li>Access to PayPal's <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_payflow-recurring-billing-overview-outside">recurring billing</a> system</li>
-          <li>User authentication using <a href="http://developers.facebook.com/connect.php">Facebook Connect</a></li>
-          <li>Conversion from home-grown library to <a href="http://jquery.com">jQuery</a></li>
-        </ul>
-      </div>
-
-      <div class="info info2">
-        <h1>Howard Jess</h1>
-        <h3>Web Application Software Developer/Engineer</h3>
-        <a class="emailAddress local">hjess<!-- no spam -->@<!-- spam not -->mail.<span>com</span><!-- --></a>
-        <br>
-        206.412.9924
-      </div>
-
-      <div class="job" id="jobCardomain">
-        <span class="jobName"><a href="http://www.cardomain.com">Cardomain Networks, Inc.</a></span>
-        <span class="jobID">Web Developer</span>
-        <span class="jobDate">September 2006 &rarr; September 2008</span>
-        <p>
-          Front-end specialist for Cardomain's &ldquo;<em>facebook for car enthusiasts</em>&rdquo; applications.
-          Achievements and projects completed include:
-        </p>
-        <ul>
-          <li>Homepage and navigation overhaul, with complete site re-layout for uniform ad placements, using Perl/<a href="http://template-toolkit.org/">TTK</a></li>
-          <li>Member group subsystem, using <a href="http://rubyonrails.org/">Ruby on Rails</a></li>
-          <li>Immersed in all aspects of <a href="http://en.wikipedia.org/wiki/Agile_software_development">Agile development</a>,
-          including story estimation, pair programming, <a href="http://www.agiledata.org/essays/tdd.html" title="Test-driven development">TDD</a>, sprint demos, and frequent releases
-        </ul>
-      </div>
+      </section>
 
       <!--
       <div id="more">
         <a class="local" href="#moreLink" id="moreLink">more jobs &hellip;</a>
       </div>
       <div id="moreJobs">
-        <div class="job" id="jobDHI">
-          <span class="jobName"><a href="http://web.archive.org/web/20071218143436/http://www.dhitechnologies.com/">DHI Technologies, Inc.</a></span>
+
+        <section class="job" id="jobWetpaint">
+            <h2><span class="jobName"><a href="https://web.archive.org/web/20090719200629/http://www.wetpaint.com/">Wetpaint.com, Inc.</a></span></h2>
+            <span class="jobID">UI Web Developer</span>
+            <span class="jobDate">September 2008 &rarr; July 2009</span>
+            <p>
+            UI developer for Wetpaint's &ldquo;<em>build your own wiki</em>&rdquo; system.
+            Projects:
+            </p>
+            <ul>
+            <li>Enhanced messaging forum system</li>
+            <li>Access to PayPal's <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_payflow-recurring-billing-overview-outside">recurring billing</a> system</li>
+            <li>User authentication using <a href="http://developers.facebook.com/connect.php">Facebook Connect</a></li>
+            <li>Conversion from home-grown library to <a href="http://jquery.com">jQuery</a></li>
+            </ul>
+        </section>
+
+        <section class="info info2">
+            <h1>Howard Jess</h1>
+            <h3>Web Application Software Developer/Engineer</h3>
+            <a class="emailAddress local">hjess<!== no spam ==>@<!== spam not ==>mail.<span>com</span><!== ==></a>
+            <br>
+            206.412.9924
+        </section>
+
+        <section class="job" id="jobCardomain">
+            <h2><span class="jobName"><a href="http://www.cardomain.com">Cardomain Networks, Inc.</a></span></h2>
+            <span class="jobID">Web Developer</span>
+            <span class="jobDate">September 2006 &rarr; September 2008</span>
+            <p>
+            Front-end specialist for Cardomain's &ldquo;<em>facebook for car enthusiasts</em>&rdquo; applications.
+            Projects:
+            </p>
+            <ul>
+            <li>Homepage and navigation overhaul, with complete site re-layout for uniform ad placements, using Perl/<a href="http://template-toolkit.org/">TTK</a></li>
+            <li>Member group subsystem, using <a href="http://rubyonrails.org/">Ruby on Rails</a></li>
+            <li>Immersed in all aspects of <a href="http://en.wikipedia.org/wiki/Agile_software_development">Agile development</a>,
+            including story estimation, pair programming, <a href="http://www.agiledata.org/essays/tdd.html" title="Test-driven development">TDD</a>, sprint demos, and frequent releases
+            </ul>
+        </section>
+
+        <section class="job" id="jobDHI">
+        <h2><span class="jobName"><a href="http://web.archive.org/web/20071218143436/http://www.dhitechnologies.com/">DHI Technologies, Inc.</a></span></h2>
           <span class="jobID">Software Engineer</span>
           <span class="jobDate">March 2004 &rarr; September 2006</span>
           <p>
             Javascript specialist for DHI's <strong>JSSorcerer</strong><small>&trade;</small> Javascript transpiler.
-            Achievements and projects completed include:
+            Projects:
           </p>
           <ul>
             <li>Created detailed catalog of browser behavioral differences for Internet Explorer, Firefox, Safari and Opera</li>
@@ -352,40 +360,47 @@
             <li>Integrated JSSorcerer into the <a href="http://www.vim.org">VIM</a> editor</li>
             <li>Designed and built a lightweight drag-and-drop Windows JSSorcerer application</li>
           </p>
-        </div>
+        </section>
 
-        <div class="job" id="jobATT">
-          <span class="jobName"><a href="http://www.wireless.att.com/">ATT Wireless, Inc.</a></span>
+        <section class="job" id="jobATT">
+          <h2><span class="jobName"><a href="http://www.wireless.att.com/">ATT Wireless, Inc.</a></span></h2>
           <span class="jobID">Senior Software Developer</span>
           <span class="jobDate">November 2003 &rarr; February 2004</span>
           <p>
-           (using <a href="http://www.openet.com/products-services/products/fusionworks-framework.html">Openet FusionWorks</a>, DSD, C, HPUX)<br>
-           Identified DSD code <em>hotspots</em>;
-           built TCL FusionWorks plug to evaluate DSD <em>vs.</em> TCL;
-           group resource for C, Unix and DSD issues.
+            (using <a href="http://www.openet.com/products-services/products/fusionworks-framework.html">Openet FusionWorks</a>, DSD, C, HPUX)
           </p>
-        </div>
+          <ul>
+            <li>Identified DSD code <em>hotspots</em></li>
+            <li>built TCL FusionWorks plug to evaluate DSD <em>vs.</em> TCL</li>
+            <li>group resource for C, Unix and DSD issues.</li>
+          </ul>
+        </section>
 
-        <div class="job" id="jobLSI">
-          <span class="jobName"><a href="http://www.lsi.com/storage_home/products_home/legacy/totalnet_advanced_server/">LSI Logic, Inc.</a>
+        <section class="job" id="jobLSI">
+          <h2><span class="jobName"><a href="http://www.lsi.com/storage_home/products_home/legacy/totalnet_advanced_server/">LSI Logic, Inc.</a></h2>
           <span> (formerly <strong><a href="http://web.archive.org/web/20010410235525/www.syntax.com/home.htm">Syntax Systems, Inc.</a></strong>)</span></span>
           <span class="jobDate">October 1986 &rarr; March 2003</span>
 
-          <p><span class="jobID">Senior Technical Engineer</span>, Administrative UI, 1997 → 2003<br>
-            Designed and created a browser-based UI server configuration system, using CGI, C, Java, TCL, JavaScript, and DHTML; designed and implemented an internal engineering document publish/search system, with UIs for both technical and non-technical users.
-          </p>
+          <p><span class="jobID">Senior Technical Engineer</span>, Administrative UI, 1997 → 2003</p>
+            <ul>
+                <li>Designed and created a browser-based UI server configuration system, using CGI, C, Java, TCL, JavaScript, and DHTML</li>
+            </ul>
 
-          <p><span class="jobID">Senior Engineer</span>, Client Products, 1994 &rarr; 1997<br>
-            Implemented product <a href="http://en.wikipedia.org/wiki/Internationalization_and_localization">I18N</a>
-            routines; designed a client/server (Windows/Unix) PC backup system using <a href="http://en.wikipedia.org/wiki/NetBIOS_over_TCP/IP">NetBIOS and TCP/IP</a>.
+          <p><span class="jobID">Senior Engineer</span>, Client Products, 1994 &rarr; 1997</p>
+            <ul>
+                <li>Implemented product <a href="http://en.wikipedia.org/wiki/Internationalization_and_localization">I18N</a> routines</li>
+                <li>Designed a client/server (Windows/Unix) PC backup system using <a href="http://en.wikipedia.org/wiki/NetBIOS_over_TCP/IP">NetBIOS and TCP/IP</a></li>
+            </ul>
 
-          <p><span class="jobID">System Engineer</span>, Networking Products, 1986 &rarr; 1994<br>
-            Built the first SMB-based PC file-sharing server for VMS; designed and produced DOS and Windows network OS
-            administrative UI programs.
-          </p>
-        </div>
+          <p><span class="jobID">System Engineer</span>, Networking Products, 1986 &rarr; 1994</p>
+            <ul>
+                <li> Built the first SMB-based PC file-sharing server for VMS</li>
+                <li> Designed and produced DOS and Windows network OS administrative UI programs</li>
+            </ul>
+        </section>
       </div>
       -->
+
     </div>
 
     <h2>Education</h2>
@@ -396,7 +411,7 @@
   </div>
 </div>
 
-  <script type="text/javascript">
+  <script>
   (function() {
     window.onload = function() {
       var moreLink,moreJobs;
