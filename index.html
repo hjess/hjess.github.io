@@ -38,6 +38,11 @@
       font-size:90%;
       margin-top:32px;
     }
+    .contact-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 0 10em;
+    }
     .content {
       margin: 20px 10px;
     }
@@ -70,6 +75,7 @@
     }
     .jobID {
       font-style: italic;
+      font-weight: bold;
     }
     #jobLSI .jobID { display: inline }
     #jobLSI .jobID span { font-weight:normal }
@@ -93,8 +99,16 @@
       font-style:italic;
       padding:8px 0;
     }
+    #skills {
+      display: grid;
+      grid-template-columns: 1fr auto;
+    }
     #skills dt {
       font-weight:bold;
+    }
+    #skills dd,
+    #skills dt {
+      padding-bottom: 0.5em;
     }
     @media screen and (max-width:8in) {
         #resume {
@@ -141,12 +155,11 @@
   <section class="info">
     <h1>Howard Jess</h1>
     <h3>Web Application UI/UX Developer</h3>
-    <a class="emailAddress local">hjess<!-- no spam -->@<!-- spam not -->mail.<span>com</span><!-- --></a>
-    <br>
-    <a target="blank" href="https://www.linkedin.com/in/howardjess/">linkedin.com/in/hjess</a>
-    <br>
-
-    <a href="tel:2064129924">206.412.9924</a>
+    <div class="contact-info">
+        <a class="emailAddress local">hjess<!-- no spam -->@<!-- spam not -->mail.<span>com</span><!-- --></a>
+        <a target="blank" href="https://www.linkedin.com/in/howardjess/">linkedin.com/in/hjess</a>
+        <a href="tel:2064129924">206.412.9924</a>
+    </div>
   </section>
 
   <div class="content">
@@ -180,7 +193,7 @@
         <a href="http://en.wikipedia.org/wiki/Mac_osx">Mac OS/X</a>,
         <a href="http://en.wikipedia.org/wiki/Windows">Windows</a>
       </dd>
-      <dt>Technologies:</dt>
+      <dt>UI Technologies:</dt>
       <dd>
         <a href="https://getbootstrap.com">Bootstrap</a>,
         <a href="https://element.eleme.io/#/en-US">Element UI</a>,
@@ -210,14 +223,14 @@
         <span class="jobID">Front-end Web Application Developer</span>
         <span class="jobDate">April 2017 &rarr; June 2023</span>
         <span class="jobSkills">Javascript, Typescript, Vue, SCSS, CSS, Bootstrap, HTML, Razor (C# templates), SignalR, ASP.Net, Git</span>
-        <p>Brought in as Trupanion's first UI specialist. Projects</p>
+        <p>Brought in as Trupanion's first UI specialist. Projects:</p>
         <ul>
-          <li><a href="http://members.trupanion.com">Member Portal</a> (lead UI dev): provides customer access to their account. VanillaJS/Typescript/jQuery/Vue, Sass</li>
-          <li><a href="http://trupanion.com">Website 3.0</a> (UI team member): main public-facing website; part of a rewrite team. VanillaJS/jQuery, Sass, Sitecore</li>
-          <li><a href="http://vetportal.trupanion.com">VetPortal</a> (lead UI dev): veterinary hospital software. Full rewrite from VanillaJS/jQuery/KnockoutJS/Kendo to Vue/Bootstrap, reduced network payload by 50%</li>
-          <li>Hospital Management Tool (sole UI dev): internal support for VetPortal. Vue, Element</li>
-          <li>Partner Portal (sole UI dev): allows State Farm agents to create &amp; manage their portfolio of Trupanion policies. Vue</li>
-          <li>Agent Reassignment Tool (sole UI dev): allow State Farm managers to manage policy re-distribution among agents. Vue</li>
+            <li><a href="http://members.trupanion.com">Member Portal</a> (lead UI dev): led UI team, writing a .NET-MVC/SPA hybrid from scratch, providing customers access to their account. <em>VanillaJS, Typescript, jQuery, Vue, Sass</em></li>
+          <li><a href="http://trupanion.com">Website 3.0</a> (UI team member): part of a rewrite team for the main public-facing website. <em>VanillaJS, jQuery, Sass, Sitecore</em></li>
+          <li><a href="http://vetportal.trupanion.com">VetPortal</a> (lead UI dev): led a full rewrite of Trupanion's veterinary hospital software (.NET-MVC/SPA hybrid), from VanillaJS/jQuery/KnockoutJS/Kendo to Vue/Bootstrap, reducing network payload by 50%. <em>Vue, SignalR, Razor</em></li>
+          <li>Hospital Management Tool (sole UI dev): created an application (SPA) providing internal support for VetPortal. <em>Vue, Element</em></li>
+          <li>Partner Portal (sole UI dev): created an application (SPA) allowing State Farm agents to create &amp; manage their portfolio of Trupanion policies. <em>Vue</em></li>
+          <li>Agent Reassignment Tool (sole UI dev): created an application (SPA) allowing State Farm managers to manage policy re-distribution among agents. <em>Vue</em></li>
         </ul>
       </section>
 
@@ -238,11 +251,11 @@
       <section class="info info2">
         <h1>Howard Jess</h1>
         <h3>Web Application UI/UX Developer</h3>
-        <a class="emailAddress local">hjess<!-- no spam -->@<!-- spam not -->mail.<span>com</span><!-- --></a>
-        <br>
-        <a target="blank" href="https://www.linkedin.com/in/howardjess/">linkedin.com/in/hjess</a>
-        <br>
-        <a href="tel:2064129924">206.412.9924</a>
+        <div class="contact-info">
+            <a class="emailAddress local">hjess<!-- no spam -->@<!-- spam not -->mail.<span>com</span><!-- --></a>
+            <a target="blank" href="https://www.linkedin.com/in/howardjess/">linkedin.com/in/hjess</a>
+            <a href="tel:2064129924">206.412.9924</a>
+        </div>
       </section>
 
       <section class="job" id="jobRosettaStone">
