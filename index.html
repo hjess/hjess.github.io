@@ -55,6 +55,15 @@
       display:none;
       margin-bottom: 20px;
     }
+    .jobDate >span {
+        color: transparent;
+        margin-right: -0.7em;
+    }
+    .jobDate >span::before {
+        color: #000;
+        content: '→';
+    }
+
     .strong {
       font-weight:bold;
     }
@@ -213,32 +222,32 @@
       <section class="job" id="jobTrupanion">
         <h2>
             <span class="jobName"><a href="http://trupanion.com">Trupanion</a></span>
-            <span class="jobDate">April 2017 &rarr; June 2023</span>
+            <span class="jobDate">April 2017 <span>to</span> June 2023</span>
         </h2>
         <span class="jobSkills">Javascript, Typescript, Vue, SCSS, CSS, Bootstrap, HTML, Razor (C# templates), SignalR, ASP.Net, Git</span>
         <p>Brought in as Trupanion's first UI specialist. Projects:</p>
         <ul>
-            <li><a href="http://members.trupanion.com">Member Portal</a> (lead UI dev): led UI team, writing a .NET-MVC/SPA hybrid from scratch, providing customers access to their account. <em>VanillaJS, Typescript, jQuery, Vue, Sass</em></li>
-          <li><a href="http://trupanion.com">Website 3.0</a> (UI team member): part of a rewrite team for the main public-facing website. <em>VanillaJS, jQuery, Sass, Sitecore</em></li>
-          <li><a href="http://vetportal.trupanion.com">VetPortal</a> (lead UI dev): led a full rewrite of Trupanion's veterinary hospital software (.NET-MVC/SPA hybrid), from VanillaJS/jQuery/KnockoutJS/Kendo to Vue/Bootstrap, reducing network payload by 50%. <em>Vue, SignalR, Razor</em></li>
-          <li>Hospital Management Tool (sole UI dev): created an application (SPA) providing internal support for VetPortal. <em>Vue, Element</em></li>
-          <li>Partner Portal (sole UI dev): created an application (SPA) allowing State Farm agents to create &amp; manage their portfolio of Trupanion policies. <em>Vue</em></li>
-          <li>Agent Reassignment Tool (sole UI dev): created an application (SPA) allowing State Farm managers to manage policy re-distribution among agents. <em>Vue</em></li>
+            <li><a href="http://vetportal.trupanion.com">VetPortal</a> (lead UI dev): cut payload by 50%, decreasing server load and client load time, in a full rewrite of vet hospital software. </li>
+            <li>Hospital Management Tool (sole UI dev): created web app simplifying internal support for VetPortal. </li>
+            <li><a href="http://members.trupanion.com">Member Portal</a> (lead UI dev): created member access application <em>v2</em>; reduced customer phone support load by 70%. </li>
+            <li>Partner Portal (sole UI dev): created web app for State Farm agents to create and manage policies. </li>
+            <li>Agent Reassignment Tool (sole UI dev): created web app for State Farm managers to manage agent policy assignments. </li>
+            <li><a href="http://trupanion.com">Website 3.0</a>: consulted/mentored the rewrite team Trupanion's public-facing website. </li>
         </ul>
       </section>
 
       <section class="job" id="jobNavigatingCancer">
         <h2>
             <span class="jobName"><a href="http://www.navigatingcancer.com">Navigating Cancer</a> <span class="note">(contract position)</span></span>
-            <span class="jobDate">June 2016 &rarr; February 2017</span>
+            <span class="jobDate">June 2016 <span>to</span> February 2017</span>
         </h2>
         <span class="jobSkills">Bootstrap, Coffeescript, Backbone.js, HAML, JSON Schema, JSON Editor, Mocha, Ruby on Rails, SASS</span>
         <p>
           Developer for Navigating Cancer's suite of Patient Care Management software, dedicated to improving and streamlining the relationship and care experience for cancer
           patients and oncology clinics. Projects:</p>
         <ul>
-          <li>Complex Triage Pathways: implemented a set of <a href="https://json-schema.org/">JSON Schema</a>+<a href="https://github.com/json-editor/json-editor">JSON Editor</a>-based dynamic forms to standardize symptom data recording for cancer patients</li>
-          <li><a href="https://livingstyleguide.org/">Living Style Guide</a>: continued work to maintain and upgrade the development group's style and component library</li>
+          <li>Complex Triage Pathways: implemented <a href="https://json-schema.org/">JSON Schema</a>+<a href="https://github.com/json-editor/json-editor">JSON Editor</a>-based dynamic forms to standardize symptom data recording; reduced clinic tech training requirement.</li>
+          <li><a href="https://livingstyleguide.org/">Living Style Guide</a>: continued work to maintain and upgrade the style and component library document; reduced developer training requirement.</li>
         </ul>
       </section>
 
@@ -255,25 +264,25 @@
       <section class="job" id="jobRosettaStone">
         <h2>
           <span class="jobName"><a href="http://www.rosettastone.com">Rosetta Stone</a> <span class="note">(acquired <b>Livemocha</b> in April 2013)</span></span>
-          <span class="jobDate">November 2012 &rarr; April 2016</span>
+          <span class="jobDate">November 2012 <span>to</span> April 2016</span>
         </h2>
         <span class="jobSkills">AngularJS, CouchDB, HTML, Javascript, Mixpanel, SCSS, Sproutcore</span>
         <p>
           Developer for Rosetta Stone's <a href="https://advancedenglish.rosettastone.com/">Advanced English for Business</a> language-learning application, and <a href="http://www.livemocha.com">Livemocha</a>, a social community-based language-learning application.
           Projects:</p>
         <ul>
-          <li>Password reset/recovery</li>
-          <li>User profile management</li>
-          <li>Partner connections</li>
-          <li>Analytics, using <a href="http://www.mixpanel.com/">Mixpanel Analytics</a></li>
-          <li>Full language-learning engine (a <em><a href="https://en.wikipedia.org/wiki/Single-page_application">SPA</a></em>) rewrite from <a href="http://sproutcore.com/">Sproutcore</a> to <a href="https://angularjs.org/">AngularJS</a>.</li>
+          <li>Full language-learning engine: rewrite from <a href="http://sproutcore.com/">Sproutcore</a> to <a href="https://angularjs.org/">AngularJS</a>; reduced network payload and latencies, increased ease-of-learning/ease-of-use.</li>
+          <li>Password reset/recovery: simplified components to reduce developer maintenance responsibilities. </li>
+          <li>User profile management: reduced back-office maintenance tasks. </li>
+          <li>Partner connections: created application links to 3rd-party partners. </li>
+          <li>Analytics, using <a href="http://www.mixpanel.com/">Mixpanel Analytics</a>: supported enhanced BI/BA.</li>
         </ul>
       </section>
 
       <section class="job" id="jobOptify">
         <h2>
             <span class="jobName"><a href="http://www.optify.net">Optify, Inc.</a></span>
-            <span class="jobDate">September 2011 &rarr; October 2012</span>
+            <span class="jobDate">September 2011 <span>to</span> October 2012</span>
         </h2>
         <span class="jobSkills">Backbone.js, HTML, Javascript, LESS, Mixpanel</span>
         <p>
@@ -281,17 +290,17 @@
           Projects:
         </p>
         <ul>
-          <li>Customer site &ldquo;Landing Page&rdquo; editor/publisher</li>
-          <li>Contact Manager &amp; Email Manager tools</li>
-          <li>Analytics, using <a href="http://www.mixpanel.com/">Mixpanel Analytics</a></li>
-          <li>Rewrote UI coding standards document, and overhauled the Javascript library namespace</li>
+          <li>Created a customer site &ldquo;Landing Page&rdquo; editor/publisher. </li>
+          <li>Created and updated Contact Manager and Email Manager tools. </li>
+          <li>Implemented analytics, using <a href="http://www.mixpanel.com/">Mixpanel Analytics</a>. </li>
+          <li>Updated and enhanced UI coding standards document, and overhauled the Javascript library namespace. </li>
         </ul>
       </section>
 
       <section class="job" id="jobCobalt">
         <h2>
             <span class="jobName"><a href="http://www.cobalt.com">Cobalt.com, Inc.</a></span>
-            <span class="jobDate">September 2009 &rarr; September 2011</span>
+            <span class="jobDate">September 2009 <span>to</span> September 2011</span>
         </h2>
         <p>
           Lead UI developer on Cobalt's <em>New Products</em> team, charged with creating
@@ -300,12 +309,12 @@
           Projects:
         </p>
         <ul>
-          <li>Embedded <a href="http://code.google.com/apis/maps/">Google maps</a> for location pages</li>
-          <li><a href="https://web.archive.org/web/20090618161456/http://developers.facebook.com/">Facebook</a> and
+          <li>Implemented embedded <a href="http://code.google.com/apis/maps/">Google maps</a> for location pages. </li>
+          <li>Created <a href="https://web.archive.org/web/20090618161456/http://developers.facebook.com/">Facebook</a> and
             <a href="https://developer.twitter.com/en/docs/api-reference-index">Twitter</a> publishing and
-            <a href="http://code.google.com/apis/ajaxfeeds/">feed</a> widgets</li>
-          <li>Embedded <a href="http://code.google.com/apis/youtube/overview.html">YouTube</a> player/playlist handler</li>
-          <li>Initial implementation of front-end unit testing using <a href="http://code.google.com/p/js-test-driver/">jstestdriver</a></li>
+            <a href="http://code.google.com/apis/ajaxfeeds/">feed</a> widgets. </li>
+          <li>Implemented embedded <a href="http://code.google.com/apis/youtube/overview.html">YouTube</a> player/playlist handler. </li>
+          <li>Implemented front-end unit testing using <a href="http://code.google.com/p/js-test-driver/">jstestdriver</a>. </li>
         </ul>
       </section>
     </div>
