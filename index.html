@@ -70,6 +70,12 @@
     .jobSkills {
       font-style: italic;
     }
+    .company-gone {
+      display: block;
+      font-size: 0.85rem;
+      font-style: italic;
+      font-weight:100;
+    }
     .job {
       margin:10px 0 24px;
     }
@@ -99,6 +105,7 @@
       font-weight:bold;
     }
     .job .jobName .note {
+      display: inline;
       font-size: 0.85rem;
       font-weight:100;
     }
@@ -239,7 +246,7 @@
 
       <section class="job" id="jobNavigatingCancer">
         <h2>
-            <span class="jobName"><a href="http://www.navigatingcancer.com">Navigating Cancer</a> <span class="note">(contract position)</span></span>
+            <span class="jobName"><a href="http://www.navigatingcancer.com">Navigating Cancer</a> <table class="note"><tr><td>(contract position)</td></tr></table></span>
             <span class="jobDate">June 2016 <span>to</span> February 2017</span>
         </h2>
         <span class="jobSkills">Bootstrap, Coffeescript, Backbone.js, HAML, JSON Schema, JSON Editor, Mocha, Ruby on Rails, SASS</span>
@@ -264,9 +271,10 @@
 
       <section class="job" id="jobRosettaStone">
         <h2>
-          <span class="jobName"><a href="http://www.rosettastone.com">Rosetta Stone</a> <span class="note">(acquired <b>Livemocha</b> in April 2013)</span></span>
+          <span class="jobName"><a href="http://www.rosettastone.com">Rosetta Stone</a></span>
           <span class="jobDate">November 2012 <span>to</span> April 2016</span>
         </h2>
+        <table class="company-gone note"><tr><td>(Rosetta Stone acquired <b>Livemocha</b> in April 2013)</td></tr></table>
         <span class="jobSkills">AngularJS, CouchDB, HTML, Javascript, Mixpanel, SCSS, Sproutcore</span>
         <p>
           Developer for Rosetta Stone's <a href="https://advancedenglish.rosettastone.com/">Advanced English for Business</a> language-learning application, and <a href="http://www.livemocha.com">Livemocha</a>, a social community-based language-learning application.
@@ -285,6 +293,7 @@
             <span class="jobName"><a href="http://www.optify.net">Optify</a></span>
             <span class="jobDate">September 2011 <span>to</span> October 2012</span>
         </h2>
+        <table class="note company-gone"><tr><td>(Optify was acquired by Marketo in 2013.)</td></tr></table>
         <span class="jobSkills">Backbone.js, HTML, Javascript, LESS, Mixpanel</span>
         <p>
           UI developer for Optify's <em>Inbound Marketing</em> software suite, a <em><a href="http://en.wikipedia.org/wiki/Software_as_a_service">SAAS</a></em> tool for B2B marketers.
@@ -300,9 +309,10 @@
 
       <section class="job" id="jobCobalt">
         <h2>
-            <span class="jobName"><a href="http://www.cdkglobal.com">CDK Global</a> <span class="note">(formerly Cobalt)</span></span>
+            <span class="jobName"><a href="http://www.cdkglobal.com">Cobalt</a></span>
             <span class="jobDate">September 2009 <span>to</span> September 2011</span>
         </h2>
+        <table class="note company-gone"><tr><td>(Cobalt was acquired by ADP in 2010, and is now known as CDK Global.)</td></tr></table>
         <p>
           Lead UI developer on Cobalt's <em>New Products</em> team, charged with creating
           and delivering innovative website products for sale to auto manufacturers and
