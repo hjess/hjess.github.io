@@ -1,0 +1,147 @@
+:root {
+    --aliceblue: #f0f8ff;
+    --alicebluebg: #f0f8ff44;
+    --bluebg: #0000ff18;
+}
+body {
+    font-family: sans-serif;
+    font-size: 1.5em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 98vh;
+    justify-content: space-between;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+  &::before {
+    content: open-quote;
+  }
+  &::after {
+    content: close-quote;
+  }
+}
+
+footer,
+header {
+    padding: 1rem 0;
+    background-color: var(--alicebluebg);
+    color: blue;
+    text-align: center;
+    q {
+        display: block;
+        font-size: 0.8em;
+        font-style: italic;
+        font-weight: 100;
+    }
+}
+footer {
+    font-size: 1rem;
+    font-style: italic;
+    padding: 0.5rem 0 0.5rem 2rem;
+    text-align: left;
+}
+section.content {
+    background-image: url(dadBod.png);
+    background-repeat: repeat no-repeat;
+    height: fit-content;
+    &:has(#joke-list:empty) {
+        background: none;
+    }
+}
+
+.line {
+    display: block;
+    margin: 0.5rem;
+}
+input {
+    border: 0.1rem solid blue;
+    border-radius: 0.5rem;
+    flex-grow: 1;
+    padding: 0.5rem;
+}
+button {
+    background-color: var(--aliceblue);
+    border: 0.1rem solid blue;
+    border-radius: 0.5rem;
+    font-size: 1em;
+    padding: 0.5rem;
+    width: fit-content;
+}
+#search-form {
+    & .line {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+}
+#one-joke .the-joke,
+#joke-list {
+    border: 0.2rem solid var(--bluebg);
+    border-radius: 8rem;
+    list-style-type: none;
+    overflow: hidden;
+    padding: 6rem;
+
+    &:empty {
+        display: none;
+    }
+    & li {
+        border-radius: 1rem;
+        padding: 1.2rem;
+        &:nth-child(odd) {
+            background-color: var(--alicebluebg);
+        }
+    }
+}
+.not-found {
+    padding: 2rem 0;
+    color: red;
+}
+.hide {
+    display: none;
+}
+#pager {
+    background-color: var(--alicebluebg);
+    border-radius: 15%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 15%;
+    &.hide {
+        visibility: hidden;
+    }
+    & li {
+        color: blue;
+        cursor: pointer;
+        list-style-type: none;
+        padding: 0 1rem;
+        &.current .page-number,
+        &.current .page-total {
+            border: 1px solid blue;
+            display: inline-block;
+            width: 3rem;
+            text-align: center;
+        }
+        &.inactive {
+            color: grey;
+            pointer-events: none;
+        }
+    }
+}
+
+#one-joke .joke-copied {
+    display: inline-block;
+    font-size: 1rem;
+    font-style: italic;
+    margin-left: 1rem;
+    opacity: 0;
+    transition: all 1.5s;
+}
+#one-joke.show .joke-copied {
+    opacity: 1.0;
+}
+
