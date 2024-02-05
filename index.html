@@ -44,11 +44,34 @@
     }
     .contact-info {
       display: grid;
+      gap: 1em;
       grid-template-columns: 1fr 1fr 1fr;
-      margin: 0 8em;
+      /*
+      a {
+          align-self: end;
+          display: inline-flex;
+          height: 1.5em;
+          justify-content: center;
+          vertical-align: bottom;
+      }
+      */
+      a.email-address {
+          justify-self: end;
+      }
+      a.phone-number {
+          justify-self: start;
+      }
+      a.linkedin img {
+          height: 1em;
+          margin-right: 0.15em;
+          width: 1em;
+      }
     }
     .content {
       margin: 0.25em;
+      > h2 {
+          margin-top: 1.5em;
+      }
     }
     .pct {
         font-style: italic;
@@ -84,6 +107,7 @@
       display: block;
       font-size: 0.9em;
       font-style: italic;
+      margin-left: 2.5em;
       margin-top: -0.5em;
     }
     .job {
@@ -110,6 +134,7 @@
         border: none;
         display: flex;
         justify-content: space-between;
+        margin-bottom: -0.5em;
         padding: 0.35em;
     }
     .job .jobName {
@@ -141,10 +166,12 @@
     #skills dt {
       padding-bottom: 0.5em;
     }
-    body.small #skills dd,
-    body.small #skills dt,
-    body.small #skills a {
-      font-size: 2vw;
+    body.small #skills {
+        dd,
+        dt,
+        a {
+            font-size: 2vw;
+        }
     }
     @media screen and (max-width:8in) {
         #resume {
@@ -168,6 +195,11 @@
           display: block;
           page-break-before: always;
         }
+        a,
+        a:visited {
+            color: inherit;
+            text-decoration: none;
+        }
         #resume {
           border: none;
           padding-top: 0;
@@ -183,9 +215,9 @@
         <h1>Howard Jess</h1>
         <h3>Web Application UI/UX Developer</h3>
         <div class="contact-info">
-            <a target="_blank" href="mailto:hjess@mail.com" class="emailAddress">hjess@mail.com</a>
-            <a target="_blank" href="https://www.linkedin.com/in/howardjess/">linkedin.com/in/hjess</a>
-            <a href="tel:2064129924">206.412.9924</a>
+            <a target="_blank" href="mailto:hjess@mail.com" class="email-address">hjess@mail.com</a>
+            <a target="_blank" href="https://www.linkedin.com/in/howardjess/" class="linkedin">linkedin.com/in/hjess</a>
+            <a href="tel:2064129924" class="phone-number">206.412.9924</a>
         </div>
     </section>
     <p>
@@ -342,14 +374,12 @@
             <span class="jobName">Web Application UI Developer<br/><a href="http://trupanion.com">Trupanion</a></span>
             <span class="jobDate">2017 <span>to</span> 2023</span>
         </h2>
-        <p>Trupanion's first dedicated UI specialist.</p>
         <ul>
             <li><a href="http://vetportal.trupanion.com">VetPortal</a> (lead UI dev): full rewrite, for a dramatic reduction of application payload. </li>
             <li>Hospital Management Tool (sole UI dev): cut support staff paperwork and load.</i> </li>
             <li><a href="http://members.trupanion.com">Member Portal</a> (lead UI dev): lowered customer phone support load by up to <i class="pct">25%</i>. </li>
             <li>Partner Portal (sole UI dev): increased external policy sales.</li>
             <li>Agent Reassignment Tool (sole UI dev): lead to sizeable reduction in agent administrator paperwork. </li>
-            <li><a href="http://trupanion.com">Website 3.0</a>: mentored the rewrite team for Trupanion's public-facing website. </li>
         </ul>
         <span class="jobSkills">Javascript, Typescript, Vue, SCSS, CSS, Bootstrap, HTML, Razor (C# templates), SignalR, ASP.Net, Git</span>
       </section>
@@ -359,10 +389,9 @@
             <span class="jobName">Software Engineer<br/><a href="http://www.navigatingcancer.com">Navigating Cancer</a></span>
             <span class="jobDate">2016 <span>to</span> 2017</span>
         </h2>
-        <p> Developer for Navigating Cancer's Patient Care Management software. </p>
         <ul>
-            <li>Complex Triage Pathways: <a href="https://json-schema.org/">JSON Schema</a>+<a href="https://github.com/json-editor/json-editor">JSON Editor</a> forms reduced clinic training requirement.</li>
-            <li><a href="https://livingstyleguide.org/">Living Style Guide</a>: style and component library lowered developer support cost.</li>
+            <li>Complex Triage Pathways: created <a href="https://json-schema.org/">JSON Schema</a>+<a href="https://github.com/json-editor/json-editor">JSON Editor</a> based forms reduced clinic training requirement.</li>
+            <li><a href="https://livingstyleguide.org/">Living Style Guide</a>: updated the style and component library, lowered developer support cost.</li>
         </ul>
         <span class="jobSkills">Bootstrap, Coffeescript, Backbone.js, HAML, JSON Schema, JSON Editor, Mocha, Ruby on Rails, SASS</span>
       </section>
@@ -373,9 +402,9 @@
         <h1>Howard Jess</h1>
         <h3>Web Application UI/UX Developer</h3>
         <div class="contact-info">
-            <a target="_blank" href="mailto:hjess@mail.com" class="emailAddress">hjess@mail.com</a>
-            <a target="_blank" href="https://www.linkedin.com/in/howardjess/">linkedin.com/in/hjess</a>
-            <a href="tel:2064129924">206.412.9924</a>
+            <a target="_blank" href="mailto:hjess@mail.com" class="email-address">hjess@mail.com</a>
+            <a target="_blank" href="https://www.linkedin.com/in/howardjess/" class="linkedin">linkedin.com/in/hjess</a>
+            <a href="tel:2064129924" class="phone-number">206.412.9924</a>
         </div>
       </section>
 
@@ -384,14 +413,11 @@
           <span class="jobName">Web Application UI Developer<br/><a href="http://www.rosettastone.com">Rosetta Stone</a></span>
           <span class="jobDate">2012 <span>to</span> 2016</span>
         </h2>
-        <p>
-          Developer for Rosetta Stone's <a href="https://advancedenglish.rosettastone.com/">Advanced English for Business</a> and <a href="http://www.livemocha.com">Livemocha</a>.
-        </p>
         <ul>
-            <li>Learning engine rewrite (<a href="http://sproutcore.com/">Sproutcore</a>&rarr;<a href="https://angularjs.org/">AngularJS</a>) reduced network payload and waits, cutting network costs and user frustration.</li>
-            <li>Password reset/recovery: simplified components reduced developer maintenance. </li>
-            <li>Partner connections: created links to 3rd-parties, increasing application visibility/SEO. </li>
-          <li>Analytics, using <a href="http://www.mixpanel.com/">Mixpanel</a>, enhancing BI/BA.</li>
+            <li>Learning engine: full application rewrite (<a href="http://sproutcore.com/">Sproutcore</a>&rarr;<a href="https://angularjs.org/">AngularJS</a>) reduced network payload and latency, cutting network costs and user frustration.</li>
+            <li>Password reset/recovery: simplified components to reduce developer maintenance. </li>
+            <li>Partner connections: integrated 3rd-party linkage, increasing application visibility/SEO. </li>
+          <li>Analytics: used <a href="http://www.mixpanel.com/">Mixpanel</a> to enhance BI/BA.</li>
         </ul>
         <span class="jobSkills">AngularJS, CouchDB, HTML, Javascript, Mixpanel, SCSS, Sproutcore</span>
       </section>
@@ -401,12 +427,11 @@
             <span class="jobName">Web Application UI Developer<br/><a href="http://www.optify.net">Optify</a></span>
             <span class="jobDate">2011 <span>to</span> 2012</span>
         </h2>
-        <p> UI developer for Optify's <em>Inbound Marketing</em> software suite. </p>
+
         <ul>
           <li>Developed a site &ldquo;Landing Page&rdquo; editor/publisher, for 100% hands-off customer use. </li>
           <li>Authored and updated Contact Manager and Email Manager tools. </li>
           <li>Designed and built analytics, using <a href="http://www.mixpanel.com/">Mixpanel</a>, finally providing instrumentation visibility. </li>
-          <li>Updated and enhanced UI coding standards document, and rebuilt application Javascript library. </li>
         </ul>
         <span class="jobSkills">Backbone.js, HTML, Javascript, LESS, Mixpanel</span>
       </section>
@@ -416,14 +441,14 @@
             <span class="jobName">Web Application UI Developer<br/><a href="http://www.cdkglobal.com">Cobalt</a></span>
             <span class="jobDate">2009 <span>to</span> 2011</span>
         </h2>
-        <p> Lead UI developer on Cobalt's <em>New Products</em> team. </p>
+
         <ul>
           <li>Authored embedded <a href="http://code.google.com/apis/maps/">Google maps</a> for location pages. </li>
           <li>Built <a href="https://web.archive.org/web/20090618161456/http://developers.facebook.com/">Facebook</a> and
             <a href="https://developer.twitter.com/en/docs/api-reference-index">Twitter</a> publishing and
             <a href="http://code.google.com/apis/ajaxfeeds/">feed</a> widgets. </li>
           <li>Produced embedded <a href="http://code.google.com/apis/youtube/overview.html">YouTube</a> player/playlist handler. </li>
-          <li>Started front-end unit testing using <a href="http://code.google.com/p/js-test-driver/">jstestdriver</a>. </li>
+          <li>Introduced front-end unit testing using <a href="http://code.google.com/p/js-test-driver/">jstestdriver</a>. </li>
         </ul>
       </section>
     </div>
