@@ -6,17 +6,20 @@
   <style>
     body {
       background-color:#fff;
+      font-family:sans-serif;
       font-size: 14px;
     }
     #resume {
       background-color: #fafafa;
       border: 1px solid #aaa;
-      font-family:sans-serif;
       font-size:1rem;
       margin:4px auto;
       padding: 8px;
       position:relative;
       width:8in;
+      &:has(dialog[open]) {
+          overflow: hidden;
+      }
     }
     .hidden-job-titles {
         background-color: transparent;
@@ -42,19 +45,18 @@
       font-size: 0.95rem;
       margin-bottom:24px;
     }
+    .heading {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: -0.5rem;
+        p {
+            margin-left: 1rem;
+        }
+    }
     .contact-info {
       display: grid;
       gap: 1em;
       grid-template-columns: 1fr 1fr 1fr;
-      /*
-      a {
-          align-self: end;
-          display: inline-flex;
-          height: 1.5em;
-          justify-content: center;
-          vertical-align: bottom;
-      }
-      */
       a.email-address {
           justify-self: end;
       }
@@ -88,6 +90,19 @@
       border-bottom: none;
       margin:0 0 6px;
       padding:0;
+    }
+    .info h1 {
+        span {
+            padding: 0.2rem;
+        }
+    }
+    .name-and-title {
+        display: inline-block;
+        padding: 0.5em;
+            &:hover {
+            cursor: pointer;
+            outline: 1px dotted #66f;
+        }
     }
     .info.info2 {
       display:none;
@@ -173,6 +188,43 @@
             font-size: 2vw;
         }
     }
+    ul {
+        &:is(.skills, .super-powers, .funny-story, .odyssey) {
+            list-style-type: none;
+            li {
+                margin-bottom: 0.5rem;
+                >span {
+                    font-weight: bold;
+                }
+            }
+            &:is(.odyssey) .heading {
+                display: block;
+                margin: 1rem 0 0.2rem -2rem;
+            }
+        }
+    }
+    #switcher {
+        border: 1px dotted #aaa;
+        box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        font-size: 1.2rem;
+        padding: 1.6rem;
+        position: absolute;
+        text-align: center;
+        width: 20rem;
+
+        button {
+            border: 0 solid transparent;
+            color: blue;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            outline: 0 solid transparent;
+            padding: 0.5rem 1rem;
+        }
+    }
+    dialog::backdrop {
+        background-color: rgba(100,100,120,0.7);
+    }
     @media screen and (max-width:8in) {
         #resume {
             width:auto;
@@ -209,257 +261,368 @@
 
 </head>
 <body>
-<div id="resume">
-  <div class="content">
+
+<template id="drama">
     <section class="info">
-        <h1>Howard Jess</h1>
-        <h3>Web Application UI/UX Developer</h3>
+        <div class="name-and-title" title="click for something different">
+            <h1>Howard Jess</h1>
+            <h3>The UI/UX Odyssey &mdash; A Story in Five Acts</h3>
+        </div>
         <div class="contact-info">
             <a target="_blank" href="mailto:hjess@mail.com" class="email-address">hjess@mail.com</a>
             <a target="_blank" href="https://www.linkedin.com/in/howardjess/" class="linkedin">linkedin.com/in/hjess</a>
             <a href="tel:2064129924" class="phone-number">206.412.9924</a>
         </div>
     </section>
-    <p>
-       After building desktop applications, system programming, and networking infrastructure, I've focused on web application UI development. I'm especially interested in user experience and accessibility. I thrive in a collaborative team environment; in a team setting, I am highly-collaborative, and offer excellent communication and creative problem-solving skills.
-    </p>
-    <span class="hidden-job-titles">
-        For benefit of automated resume scan robots
-            Experienced Software Engineer - Frontend ;
-            Founding Frontend Engineer ;
-            Front - end Developer Vue.js ;
-            Front End ;
-            Front End Developer ;
-            Front End Engineer ;
-            Front End Software Developer ;
-            Front End Software Engineer ;
-            Front End Vue JS Developer ;
-            Front End/UX Software Developer ;
-            Front end Architect ;
-            Front-End Engineer ;
-            Front-End Software Developer ;
-            Front-end Developer ;
-            Front-end Javascript Developer ;
-            Front-end software engineer ;
-            Front-end web developer ;
-            Frontend Developer ;
-            Frontend Engineer ;
-            Frontend Engineer III ;
-            Frontend Software Engineer ;
-            JavaScript UI/UX Specialist Software Development Engineer ;
-            Jr. to Lead Front End Engineer ;
-            Lead Front End Software Engineer ;
-            Lead Frontend Engineer ;
-            Lead UI Engineer ;
-            Principal Front End Engineer ;
-            Principal Frontend Developer ;
-            Principal engineer, Front end ;
-            REMOTE Senior Front End Engineer ;
-            Senior Front End / Vue.js Developer ;
-            Senior Front End Developer ;
-            Senior Front End Engineer ;
-            Senior Front End Software Engineer ;
-            Senior Front-End Developer ;
-            Senior Front-end Web Developer ;
-            Senior Frontend Developer ;
-            Senior Frontend Engineer ;
-            Senior Frontend Engineer, Vue.js ;
-            Senior Frontend Software Developer ;
-            Senior Frontend Software Engineer ;
-            Senior Frontend/UI Software Engineer ;
-            Senior JavaScript Engineer ;
-            Senior Javascript Engineer ;
-            Senior Software Developer ;
-            Senior Software Development Engineer ;
-            Senior Software Development Engineer - Front End ;
-            Senior Software Engineer ;
-            Senior Software Engineer (Front End) ;
-            Senior Software Engineer (Front-end/Angular) ;
-            Senior Software Engineer - Frontend ;
-            Senior Software Engineer – Front End ;
-            Senior Software Engineer, Frontend ;
-            Senior Software Engineer, UI ;
-            Senior Software Engineer, Web ;
-            Senior Staff Software Engineer (Frontend) ;
-            Senior UI Engineer ;
-            Senior UI Software Developer ;
-            Senior UX Front End Developer ;
-            Senior Web Engineer ;
-            Software Developer ;
-            Software Development Engineer (Frontend) ;
-            Software Development Engineer - Web ;
-            Software Engineer ;
-            Software Engineer (Front End) ;
-            Software Engineer (Front-end) ;
-            Software Engineer - Frontend ;
-            Software Engineer I – Web ;
-            Software Engineer II - Frontend ;
-            Software Engineer II, Front-end ;
-            Software Engineer, Front End ;
-            Software Engineer, Front End - ;
-            Software Engineer, Front-End ;
-            Software Engineer, Frontend ;
-            Sr Frontend Engineer ;
-            Sr. Front End Engineer ;
-            Sr. Front-End Engineer ;
-            Sr. Frontend Software Engineer / JavaScript ;
-            Sr. Software Engineer - Frontend ;
-            Sr. Staff Front-End Engineer ;
-            Staff Front End Engineer ;
-            Staff Front End Software Engineer ;
-            Staff Front-end Engineer ;
-            Staff Frontend Engineer ;
-            Staff Software Engineer - JavaScript ;
-            Staff Web Engineer ;
-            UI Developer ;
-            UI Engineer ;
-            UI Web developer ;
-            UI software engineer ;
-            UI/VUE.JS Developer ;
-            Vue Developer ;
-            Web Developer ;
-            Web Developer IV ;
-    </span>
-    <h2>Skills</h2>
-    <dl id="skills">
-      <dt>Languages:</dt>
-      <dd>
-        <a href="http://en.wikipedia.org/wiki/Javascript">Javascript</a>,
-        <a href="https://www.typescriptlang.org/">Typescript</a>,
-        <a href="https://www.w3.org/TR/html5/">HTML</a>,
-        <a href="http://www.w3.org/TR/2005/WD-CSS21-20050613/">CSS</a> (<em><a href="http://lesscss.org">Less</a>, <a href="http://sass-lang.com/">SASS/SCSS</a></em>)
-      </dd>
-      <dt>UI Tech:</dt>
-      <dd>
-        <a href="https://getbootstrap.com">Bootstrap</a>,
-        <a href="https://element.eleme.io/#/en-US">Element UI</a>,
-        <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core.html">DOM</a>,
-        <a href="http://en.wikipedia.org/wiki/Http">HTTP</a>,
-        <a href="http://en.wikipedia.org/wiki/Internationalization_and_localization">i18n</a>/<a href="http://en.wikipedia.org/wiki/Language_localisation">l10n</a>,
-        <a href="http://jquery.com">jQuery</a>,
-        <a href="https://knockoutjs.com/">Knockout</a>,
-        <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC</a>,
-        <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST</a>,
-        <a href="http://en.wikipedia.org/wiki/Tcp/ip">TCP/IP</a>,
-        <a href="https://vuejs.org/">Vue.js</a>
-      </dd>
-      <dt>Tools:</dt>
-      <dd>
-        <a href="http://en.wikipedia.org/wiki/Bourne_shell">Bourne shell</a>,
-        <a href="http://gimp.org/">GIMP</a>,
-        <a href="https://git-scm.com/">Git</a>,
-        <a href="https://npmjs.com/">npm</a>,
-        <a href="http://vim.org/">Vim</a>
-      </dd>
-      <dt>Systems:</dt>
-      <dd>
-        <a href="http://en.wikipedia.org/wiki/Linux">Linux</a>,
-        <a href="http://en.wikipedia.org/wiki/Mac_osx">Mac OS/X</a>,
-        <a href="http://en.wikipedia.org/wiki/Unix">Unix</a>,
-        <a href="http://en.wikipedia.org/wiki/Windows">Windows</a>
-      </dd>
-      <dt>PM Workflow:</dt>
-      <dd>
-        <a href="http://en.wikipedia.org/wiki/Agile_software_development">Agile</a>,
-        <a href="http://www.scrum.org">Scrum</a>,
-      	<a href="http://en.wikipedia.org/wiki/Kanban">Kanban</a>
-     </dd>
-    </dl>
-
-    <h2>Experience</h2>
-    <div class="experience">
-
-      <section class="job" id="jobTrupanion">
-        <h2>
-            <span class="jobName">Web Application UI Developer<br/><a href="http://trupanion.com">Trupanion</a></span>
-            <span class="jobDate">2017 <span>to</span> 2023</span>
-        </h2>
-        <ul>
-            <li><a href="http://vetportal.trupanion.com">VetPortal</a> (lead UI dev): full rewrite, for a dramatic reduction of application payload. </li>
-            <li>Hospital Management Tool (sole UI dev): cut support staff paperwork and load.</i> </li>
-            <li><a href="http://members.trupanion.com">Member Portal</a> (lead UI dev): lowered customer phone support load by up to <i class="pct">25%</i>. </li>
-            <li>Partner Portal (sole UI dev): increased external policy sales.</li>
-            <li>Agent Reassignment Tool (sole UI dev): lead to sizeable reduction in agent administrator paperwork. </li>
+    <section class="experience-and-education">
+        Howard, a restless soul trapped in the labyrinth of system programming, dreamt of a brighter future. He yearned to bridge the gap between the cold logic of machines and the intuitive desires of humans. A chance encounter with a flickering web page sparked a revolution within him. Howard, the code whisperer, was born.
+        <ul class="odyssey">
+            <li>
+                <span class="heading">Act I: The Code Whisperer (2009-2011)</span>
+                <a href="http://www.cdkglobal.com">Cobalt</a> became his proving ground. Here, he wrestled with the giants of the internet - <a href="http://code.google.com/apis/maps/">Google Maps</a>, <a href="https://web.archive.org/web/20090618161456/http://developers.facebook.com/">Facebook</a>, <a href="https://developer.twitter.com/en/docs/api-reference-index">Twitter</a>, <a href="http://code.google.com/apis/youtube/overview.html">YouTube</a>. He tamed their APIs, transforming them into loyal companions that danced on the web. Unit testing became his shield, deflecting the relentless onslaught of bugs.
+            </li>
+            <li>
+                <span class="heading">Act II: The Architect of Learning (2011-2012)</span>
+                Optify beckoned, offering a new challenge. Howard, the architect, envisioned a landing page editor - a tool so intuitive, so empowering, that even the most marketing-minded individual could wield it with ease. He breathed life into the Contact Manager and Email Manager, taming the chaos of communication. Analytics, once a shadowy whisper, became a symphony of data thanks to his mastery of <a href="http://www.mixpanel.com/">Mixpanel</a>.
+            </li>
+            <li>
+                <span class="heading">Act III: The Rosetta Stone (2012-2016)</span>
+                <a href="http://www.rosettastone.com">Rosetta Stone</a> presented a monumental task: to rewrite the very engine of language learning. Howard, the sculptor, embarked on a journey to dismantle the old, cumbersome system and rebuild it anew. AngularJS became his chisel, carving a leaner, faster learning experience. Network latency, the bane of frustrated students, fell before his might. Partner connections blossomed, opening doors to a wider world of knowledge.
+            </li>
+            <li>
+                <span class="heading">Act IV: Navigating the Storm (2016-2017)</span>
+                <a href="http://www.navigatingcancer.com">Navigating Cancer</a> became a mission of compassion. Howard, the healer, knew the importance of clear communication in the face of uncertainty. He crafted forms that were easier to navigate than a hospital corridor, reducing training burdens on weary healthcare professionals. His <a href="https://livingstyleguide.org/">living style guide</a>, a beacon of consistency, brought solace to developers and patients alike.
+            </li>
+            <li>
+                <span class="heading">Act V: The Champion of the User (2017-Present)</span>
+                <a href="http://trupanion.com">Trupanion</a> became Howard's final frontier, a sprawling landscape of user interfaces in desperate need of reform. As the lead UI developer, he championed the needs of veterinarians, hospital staff, members, and even support agents. Each portal he touched became a testament to his dedication, reducing paperwork burdens and streamlining workflows.
+            </li>
+            <li>
+                <span class="heading">The Epilogue: A Legacy Yet Unwritten</span>
+                Howard's odyssey continues. Armed with his ever-growing arsenal of skills and unwavering empathy for the user, he stands ready to tackle the next challenge. The future of web development awaits, a canvas begging for his artistry.
+            </li>
         </ul>
-        <span class="jobSkills">Javascript, Typescript, Vue, SCSS, CSS, Bootstrap, HTML, Razor (C# templates), SignalR, ASP.Net, Git</span>
-      </section>
+    </section>
+</template>
 
-      <section class="job" id="jobNavigatingCancer">
-        <h2>
-            <span class="jobName">Software Engineer<br/><a href="http://www.navigatingcancer.com">Navigating Cancer</a></span>
-            <span class="jobDate">2016 <span>to</span> 2017</span>
-        </h2>
-        <ul>
-            <li>Complex Triage Pathways: created <a href="https://json-schema.org/">JSON Schema</a>+<a href="https://github.com/json-editor/json-editor">JSON Editor</a> based forms reduced clinic training requirement.</li>
-            <li><a href="https://livingstyleguide.org/">Living Style Guide</a>: updated the style and component library, lowered developer support cost.</li>
-        </ul>
-        <span class="jobSkills">Bootstrap, Coffeescript, Backbone.js, HAML, JSON Schema, JSON Editor, Mocha, Ruby on Rails, SASS</span>
-      </section>
-    </div>
 
-    <div class="experience">
-      <section class="info info2">
-        <h1>Howard Jess</h1>
-        <h3>Web Application UI/UX Developer</h3>
+<template id="plain">
+    <section class="info">
+        <div class="name-and-title" title="click for something different">
+            <h1>Howard Jess</h1>
+            <h3>Web Application UI/UX Developer</h3>
+        </div>
         <div class="contact-info">
             <a target="_blank" href="mailto:hjess@mail.com" class="email-address">hjess@mail.com</a>
             <a target="_blank" href="https://www.linkedin.com/in/howardjess/" class="linkedin">linkedin.com/in/hjess</a>
             <a href="tel:2064129924" class="phone-number">206.412.9924</a>
         </div>
-      </section>
+    </section>
+    <section class="heading-and-skills">
+        <p>
+        After building desktop applications, system programming, and networking infrastructure, I've focused on web application UI development. I'm especially interested in user experience and accessibility. I thrive in a collaborative team environment; in a team setting, I am highly-collaborative, and offer excellent communication and creative problem-solving skills.
+        </p>
+        <span class="hidden-job-titles">
+            For benefit of automated resume scan robots
+                Experienced Software Engineer - Frontend ;
+                Founding Frontend Engineer ;
+                Front - end Developer Vue.js ;
+                Front End ;
+                Front End Developer ;
+                Front End Engineer ;
+                Front End Software Developer ;
+                Front End Software Engineer ;
+                Front End Vue JS Developer ;
+                Front End/UX Software Developer ;
+                Front end Architect ;
+                Front-End Engineer ;
+                Front-End Software Developer ;
+                Front-end Developer ;
+                Front-end Javascript Developer ;
+                Front-end software engineer ;
+                Front-end web developer ;
+                Frontend Developer ;
+                Frontend Engineer ;
+                Frontend Engineer III ;
+                Frontend Software Engineer ;
+                JavaScript UI/UX Specialist Software Development Engineer ;
+                Jr. to Lead Front End Engineer ;
+                Lead Front End Software Engineer ;
+                Lead Frontend Engineer ;
+                Lead UI Engineer ;
+                Principal Front End Engineer ;
+                Principal Frontend Developer ;
+                Principal engineer, Front end ;
+                REMOTE Senior Front End Engineer ;
+                Senior Front End / Vue.js Developer ;
+                Senior Front End Developer ;
+                Senior Front End Engineer ;
+                Senior Front End Software Engineer ;
+                Senior Front-End Developer ;
+                Senior Front-end Web Developer ;
+                Senior Frontend Developer ;
+                Senior Frontend Engineer ;
+                Senior Frontend Engineer, Vue.js ;
+                Senior Frontend Software Developer ;
+                Senior Frontend Software Engineer ;
+                Senior Frontend/UI Software Engineer ;
+                Senior JavaScript Engineer ;
+                Senior Javascript Engineer ;
+                Senior Software Developer ;
+                Senior Software Development Engineer ;
+                Senior Software Development Engineer - Front End ;
+                Senior Software Engineer ;
+                Senior Software Engineer (Front End) ;
+                Senior Software Engineer (Front-end/Angular) ;
+                Senior Software Engineer - Frontend ;
+                Senior Software Engineer – Front End ;
+                Senior Software Engineer, Frontend ;
+                Senior Software Engineer, UI ;
+                Senior Software Engineer, Web ;
+                Senior Staff Software Engineer (Frontend) ;
+                Senior UI Engineer ;
+                Senior UI Software Developer ;
+                Senior UX Front End Developer ;
+                Senior Web Engineer ;
+                Software Developer ;
+                Software Development Engineer (Frontend) ;
+                Software Development Engineer - Web ;
+                Software Engineer ;
+                Software Engineer (Front End) ;
+                Software Engineer (Front-end) ;
+                Software Engineer - Frontend ;
+                Software Engineer I – Web ;
+                Software Engineer II - Frontend ;
+                Software Engineer II, Front-end ;
+                Software Engineer, Front End ;
+                Software Engineer, Front End - ;
+                Software Engineer, Front-End ;
+                Software Engineer, Frontend ;
+                Sr Frontend Engineer ;
+                Sr. Front End Engineer ;
+                Sr. Front-End Engineer ;
+                Sr. Frontend Software Engineer / JavaScript ;
+                Sr. Software Engineer - Frontend ;
+                Sr. Staff Front-End Engineer ;
+                Staff Front End Engineer ;
+                Staff Front End Software Engineer ;
+                Staff Front-end Engineer ;
+                Staff Frontend Engineer ;
+                Staff Software Engineer - JavaScript ;
+                Staff Web Engineer ;
+                UI Developer ;
+                UI Engineer ;
+                UI Web developer ;
+                UI software engineer ;
+                UI/VUE.JS Developer ;
+                Vue Developer ;
+                Web Developer ;
+                Web Developer IV ;
+        </span>
+        <h2>Skills</h2>
+        <dl id="skills">
+        <dt>Languages:</dt>
+        <dd>
+            <a href="http://en.wikipedia.org/wiki/Javascript">Javascript</a>,
+            <a href="https://www.typescriptlang.org/">Typescript</a>,
+            <a href="https://www.w3.org/TR/html5/">HTML</a>,
+            <a href="http://www.w3.org/TR/2005/WD-CSS21-20050613/">CSS</a> (<em><a href="http://lesscss.org">Less</a>, <a href="http://sass-lang.com/">SASS/SCSS</a></em>)
+        </dd>
+        <dt>UI Tech:</dt>
+        <dd>
+            <a href="https://getbootstrap.com">Bootstrap</a>,
+            <a href="https://element.eleme.io/#/en-US">Element UI</a>,
+            <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core.html">DOM</a>,
+            <a href="http://en.wikipedia.org/wiki/Http">HTTP</a>,
+            <a href="http://en.wikipedia.org/wiki/Internationalization_and_localization">i18n</a>/<a href="http://en.wikipedia.org/wiki/Language_localisation">l10n</a>,
+            <a href="http://jquery.com">jQuery</a>,
+            <a href="https://knockoutjs.com/">Knockout</a>,
+            <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC</a>,
+            <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST</a>,
+            <a href="http://en.wikipedia.org/wiki/Tcp/ip">TCP/IP</a>,
+            <a href="https://vuejs.org/">Vue.js</a>
+        </dd>
+        <dt>Tools:</dt>
+        <dd>
+            <a href="http://en.wikipedia.org/wiki/Bourne_shell">Bourne shell</a>,
+            <a href="http://gimp.org/">GIMP</a>,
+            <a href="https://git-scm.com/">Git</a>,
+            <a href="https://npmjs.com/">npm</a>,
+            <a href="https://www.vim.org/">Vim</a>
+        </dd>
+        <dt>Systems:</dt>
+        <dd>
+            <a href="http://en.wikipedia.org/wiki/Linux">Linux</a>,
+            <a href="http://en.wikipedia.org/wiki/Mac_osx">Mac OS/X</a>,
+            <a href="http://en.wikipedia.org/wiki/Unix">Unix</a>,
+            <a href="http://en.wikipedia.org/wiki/Windows">Windows</a>
+        </dd>
+        <dt>PM Workflow:</dt>
+        <dd>
+            <a href="http://en.wikipedia.org/wiki/Agile_software_development">Agile</a>,
+            <a href="http://www.scrum.org">Scrum</a>,
+            <a href="http://en.wikipedia.org/wiki/Kanban">Kanban</a>
+        </dd>
+        </dl>
+    </section>
+    <section class="experience-and-education">
+        <h2>Experience</h2>
+        <div class="experience">
 
-      <section class="job" id="jobRosettaStone">
-        <h2>
-          <span class="jobName">Web Application UI Developer<br/><a href="http://www.rosettastone.com">Rosetta Stone</a></span>
-          <span class="jobDate">2012 <span>to</span> 2016</span>
-        </h2>
-        <ul>
-            <li>Learning engine: full application rewrite (<a href="http://sproutcore.com/">Sproutcore</a>&rarr;<a href="https://angularjs.org/">AngularJS</a>) reduced network payload and latency, cutting network costs and user frustration.</li>
-            <li>Password reset/recovery: simplified components to reduce developer maintenance. </li>
-            <li>Partner connections: integrated 3rd-party linkage, increasing application visibility/SEO. </li>
-          <li>Analytics: used <a href="http://www.mixpanel.com/">Mixpanel</a> to enhance BI/BA.</li>
-        </ul>
-        <span class="jobSkills">AngularJS, CouchDB, HTML, Javascript, Mixpanel, SCSS, Sproutcore</span>
-      </section>
+        <section class="job" id="jobTrupanion">
+            <h2>
+                <span class="jobName">Web Application UI Developer<br><a href="http://trupanion.com">Trupanion</a></span>
+                <span class="jobDate">2017 <span>to</span> 2023</span>
+            </h2>
+            <ul>
+                <li><a href="http://vetportal.trupanion.com">VetPortal</a> (lead UI dev): full rewrite, for a dramatic reduction of application payload. </li>
+                <li>Hospital Management Tool (sole UI dev): a Vue SPA - cut support staff paperwork and load.</li>
+                <li><a href="http://members.trupanion.com">Member Portal</a> (lead UI dev): lowered customer phone support load by up to <i class="pct">25%</i>. </li>
+                <li>Partner Portal (sole UI dev): a Vue SPA - increased external policy sales.</li>
+                <li>Agent Reassignment Tool (sole UI dev): a Vue SPA - lead to sizeable reduction in agent administrator paperwork. </li>
+            </ul>
+            <span class="jobSkills">Javascript, Typescript, Vue, SCSS, CSS, Bootstrap, HTML, Razor (C# templates), SignalR, ASP.Net, Git</span>
+        </section>
 
-      <section class="job" id="jobOptify">
-        <h2>
-            <span class="jobName">Web Application UI Developer<br/><a href="http://www.optify.net">Optify</a></span>
-            <span class="jobDate">2011 <span>to</span> 2012</span>
-        </h2>
+        <section class="job" id="jobNavigatingCancer">
+            <h2>
+                <span class="jobName">Software Engineer<br><a href="http://www.navigatingcancer.com">Navigating Cancer</a></span>
+                <span class="jobDate">2016 <span>to</span> 2017</span>
+            </h2>
+            <ul>
+                <li>Complex Triage Pathways: created <a href="https://json-schema.org/">JSON Schema</a>+<a href="https://github.com/json-editor/json-editor">JSON Editor</a> based forms reduced clinic training requirement.</li>
+                <li><a href="https://livingstyleguide.org/">Living Style Guide</a>: updated the style and component library, lowered developer support cost.</li>
+            </ul>
+            <span class="jobSkills">Bootstrap, Coffeescript, Backbone.js, HAML, JSON Schema, JSON Editor, Mocha, Ruby on Rails, SASS</span>
+        </section>
+        </div>
 
-        <ul>
-          <li>Developed a site &ldquo;Landing Page&rdquo; editor/publisher, for 100% hands-off customer use. </li>
-          <li>Authored and updated Contact Manager and Email Manager tools. </li>
-          <li>Designed and built analytics, using <a href="http://www.mixpanel.com/">Mixpanel</a>, finally providing instrumentation visibility. </li>
-        </ul>
-        <span class="jobSkills">Backbone.js, HTML, Javascript, LESS, Mixpanel</span>
-      </section>
+        <div class="experience">
+        <section class="info info2">
+            <div class="name-and-title" title="click for something different">
+                <h1>Howard Jess</h1>
+                <h3>Web Application UI/UX Developer</h3>
+            </div>
+            <div class="contact-info">
+                <a target="_blank" href="mailto:hjess@mail.com" class="email-address">hjess@mail.com</a>
+                <a target="_blank" href="https://www.linkedin.com/in/howardjess/" class="linkedin">linkedin.com/in/hjess</a>
+                <a href="tel:2064129924" class="phone-number">206.412.9924</a>
+            </div>
+        </section>
 
-      <section class="job" id="jobCobalt">
-        <h2>
-            <span class="jobName">Web Application UI Developer<br/><a href="http://www.cdkglobal.com">Cobalt</a></span>
-            <span class="jobDate">2009 <span>to</span> 2011</span>
-        </h2>
+        <section class="job" id="jobRosettaStone">
+            <h2>
+            <span class="jobName">Web Application UI Developer<br><a href="http://www.rosettastone.com">Rosetta Stone</a></span>
+            <span class="jobDate">2012 <span>to</span> 2016</span>
+            </h2>
+            <ul>
+                <li>Learning engine: full application rewrite (<a href="http://sproutcore.com/">Sproutcore</a>&rarr;<a href="https://angularjs.org/">AngularJS</a>) reduced network payload and latency, cutting network costs and user frustration.</li>
+                <li>Password reset/recovery: simplified components to reduce developer maintenance. </li>
+                <li>Partner connections: integrated 3rd-party linkage, increasing application visibility/SEO. </li>
+            <li>Analytics: used <a href="http://www.mixpanel.com/">Mixpanel</a> to enhance BI/BA.</li>
+            </ul>
+            <span class="jobSkills">AngularJS, CouchDB, HTML, Javascript, Mixpanel, SCSS, Sproutcore</span>
+        </section>
 
-        <ul>
-          <li>Authored embedded <a href="http://code.google.com/apis/maps/">Google maps</a> for location pages. </li>
-          <li>Built <a href="https://web.archive.org/web/20090618161456/http://developers.facebook.com/">Facebook</a> and
-            <a href="https://developer.twitter.com/en/docs/api-reference-index">Twitter</a> publishing and
-            <a href="http://code.google.com/apis/ajaxfeeds/">feed</a> widgets. </li>
-          <li>Produced embedded <a href="http://code.google.com/apis/youtube/overview.html">YouTube</a> player/playlist handler. </li>
-          <li>Introduced front-end unit testing using <a href="http://code.google.com/p/js-test-driver/">jstestdriver</a>. </li>
-        </ul>
-      </section>
-    </div>
+        <section class="job" id="jobOptify">
+            <h2>
+                <span class="jobName">Web Application UI Developer<br><a href="http://www.optify.net">Optify</a></span>
+                <span class="jobDate">2011 <span>to</span> 2012</span>
+            </h2>
 
-    <h2>Education</h2>
-    <p>
-      <strong><a href="http://www.northwestern.edu">Northwestern University</a></strong><br>
-      B.A., Economics
-    </p>
-  </div>
-</div>
+            <ul>
+            <li>Developed a site &ldquo;Landing Page&rdquo; editor/publisher, for 100% hands-off customer use. </li>
+            <li>Authored and updated Contact Manager and Email Manager tools. </li>
+            <li>Designed and built analytics, using <a href="http://www.mixpanel.com/">Mixpanel</a>, finally providing instrumentation visibility. </li>
+            </ul>
+            <span class="jobSkills">Backbone.js, HTML, Javascript, LESS, Mixpanel</span>
+        </section>
+
+        <section class="job" id="jobCobalt">
+            <h2>
+                <span class="jobName">Web Application UI Developer<br><a href="http://www.cdkglobal.com">Cobalt</a></span>
+                <span class="jobDate">2009 <span>to</span> 2011</span>
+            </h2>
+
+            <ul>
+            <li>Authored embedded <a href="http://code.google.com/apis/maps/">Google maps</a> for location pages. </li>
+            <li>Built <a href="https://web.archive.org/web/20090618161456/http://developers.facebook.com/">Facebook</a> and
+                <a href="https://developer.twitter.com/en/docs/api-reference-index">Twitter</a> publishing and
+                <a href="http://code.google.com/apis/ajaxfeeds/">feed</a> widgets. </li>
+            <li>Produced embedded <a href="http://code.google.com/apis/youtube/overview.html">YouTube</a> player/playlist handler. </li>
+            <li>Introduced front-end unit testing using <a href="http://code.google.com/p/js-test-driver/">jstestdriver</a>. </li>
+            </ul>
+        </section>
+        </div>
+
+        <h2>Education</h2>
+        <p>
+        <strong><a href="http://www.northwestern.edu">Northwestern University</a></strong><br>
+        B.A., Economics
+        </p>
+    </section>
+</template>
+
+<template id="funny">
+    <section class="info">
+        <div class="name-and-title" title="click for something different">
+            <h1>Howard Jess</h1>
+            <h3>UI guy</h3>
+        </div>
+        <div class="contact-info">
+            <a target="_blank" href="mailto:hjess@mail.com" class="email-address">hjess@mail.com</a>
+            <a target="_blank" href="https://www.linkedin.com/in/howardjess/" class="linkedin">linkedin.com/in/hjess</a>
+            <a href="tel:2064129924" class="phone-number">206.412.9924</a>
+        </div>
+    </section>
+    <section class="heading-and-skills">
+      <p class="super-powers">
+         Once a dungeon dweller of system programming and networking, I&#39;ve heroically slain the boredom dragon and now quest for the holy grail of user-friendly interfaces.
+         My spirit animal? The platypus - a mashup of web dev awesomeness like HTML, CSS, and JavaScript.
+         I speak fluent code and the human dialect (sometimes).
+      </p>
+      <span class="heading">Superpowers:</span>
+      <ul class="super-powers">
+         <li><span>UI/UX Mastery:</span> I can turn a confusing mess into a masterpiece that even your grandma can navigate.</li>
+         <li><span>Collaboration Champion:</span> I play well with others, even those who still use Internet Explorer (but gently nudge them towards the light).</li>
+         <li><span>Problem-solving Picasso:</span> I can turn a bug into a beautiful fix faster than you can say "<cite>deploy</cite>".</li>
+      </ul>
+      <p class="heading">Keywords for the Resume Robot Overlords (but also my actual skills):</p>
+      <ul class="skills">
+         <li><span>Languages</span>: <a href="http://en.wikipedia.org/wiki/Javascript">Javascript</a> (my BFF), <a href="https://www.typescriptlang.org/">Typescript</a> (his cooler cousin), <a href="https://www.w3.org/TR/html5/">HTML</a> (the foundation), <a href="http://www.w3.org/TR/2005/WD-CSS21-20050613/">CSS</a> (the decorator), and their fancy friends like <a href="http://lesscss.org">Less</a> and <a href="http://sass-lang.com/">SCSS</a>.</li>
+         <li><span>Frameworks &amp; Tools</span>: From the classic veterans like <a href="https://getbootstrap.com">Bootstrap</a> and <a href="http://jquery.com">jQuery</a> to the new blood like <a href="https://vuejs.org/">Vue.js</a> and <a href="https://git-scm.com/">Git</a>, I've got them all in my utility belt.</li>
+         <li><span>Systems</span>: I can navigate the digital jungles of <a href="http://en.wikipedia.org/wiki/Linux">Linux</a>, <a href="http://en.wikipedia.org/wiki/Mac_osx">Mac</a>, <a href="http://en.wikipedia.org/wiki/Windows">Windows</a>, and even the occasional <a href="http://en.wikipedia.org/wiki/Unix">Unix</a> relic.</li>
+         <li><span>Project Management Kung Fu</span>:
+            <a href="http://en.wikipedia.org/wiki/Agile_software_development">Agile</a>,
+            <a href="http://www.scrum.org">Scrum</a>,
+            <a href="http://en.wikipedia.org/wiki/Kanban">Kanban</a> -
+            you name it, I can punch and kick my way through it.</li>
+      </ul>
+    </section>
+    <section class="experience-and-education">
+      <p class="heading">Epic Feats of Web Development:</p>
+      <ul class="funny-story">
+         <li><a href="http://trupanion.com">Trupanion</a> (2017-2023):
+            Led the UI charge for various portals, reducing paperwork for vets, hospitals, members, and even those pesky support agents (they secretly love me now).</li>
+         <li><a href="http://www.navigatingcancer.com">Navigating Cancer</a> (2016-2017): Built forms that were easier to use than a hospital gown (and way less revealing). Streamlined workflows and made everyone's life a little less cancerous (metaphorically speaking).</li>
+         <li><a href="http://www.rosettastone.com">Rosetta Stone</a> (2012-2016): Rebuilt the learning engine from the ground up, making language learning faster than a hummingbird on Red Bull. Also, simplified password resets because nobody likes remembering complicated things.</li>
+         <li>Optify (2011-2012): Built a landing page editor so user-friendly, even your marketing team could use it (no offense to marketing teams).</li>
+         <li><a href="http://www.cdkglobal.com">Cobalt</a> (2009-2011): Brought the power of Google Maps, Facebook, Twitter, and YouTube to life on webpages. Also, pioneered front-end unit testing because bugs are the enemies of a good time.</li>
+      </ul>
+      <p class="heading">Education:</p>
+      <ul class="funny-story">
+         <li>Bachelor of Arts in Economics from <a href="http://www.northwestern.edu">Northwestern University</a> (because why not?)</li>
+      </ul>
+      <p>Disclaimer: I may or may not have exaggerated certain skills for comedic effect. But hey, at least you'll remember my resume, right?</p>
+    </section>
+</template>
+
+<div id="resume"></div>
+
+<dialog id="switcher">
+    <p></p>
+    <button class="switch-resume">Show me</button>
+</dialog>
 
 <script>
     window.onload = function() {
@@ -468,6 +631,60 @@
         }
         classify();
         window.onresize = classify;
+
+        const resNames = ['plain','funny','drama'];
+        let currentRes = 0;
+
+        const resume = document.querySelector('#resume'),
+            plain = document.querySelector('#plain'),
+            funny = document.querySelector('#funny'),
+            drama = document.querySelector('#drama'),
+            dialog = document.querySelector('#switcher'),
+            dText = dialog.querySelector('p'),
+            dButton = dialog.querySelector('.switch-resume');
+
+        function showResume() {
+            currentRes = currentRes % 3;
+            let name = resNames.at(currentRes),
+                html = document.querySelector(`#${name}`).innerHTML;
+            function resetDoc() {
+                document.body.className = name;
+                document.body.scrollTo(0,0);
+                document.querySelectorAll('a[href]').forEach(anchor => anchor.target = 'offResume');
+            }
+            document.body.appendChild(dialog);
+            resume.innerHTML = html;
+            resume.appendChild(dialog);
+            resetDoc();
+            dialog.close();
+        }
+
+        function swapResume(now) {
+            let name = resNames.at((++currentRes) % resNames.length);
+            let dialogText = {
+                plain: `Interesting, eh?<br><br>To compare, let's see the resume I wrote myself.`,
+                funny: `I thought it would be fun to let an AI rewrite my resume as a comedy; it produced this.`,
+                drama: `When the AI was asked to rewrite it as a drama, it produced this.`,
+            };
+
+            dText.innerHTML = dialogText[name];
+            document.body.appendChild(dialog);
+            dialog.showModal();
+        }
+
+        dButton.addEventListener('click',showResume);
+        document.body.addEventListener('click',function(e) {
+            const SWITCHERCLASS = 'name-and-title',
+                target = e.target,
+                classes = target.classList,
+                parent = e.target.parentNode,
+                pClasses = parent.classList,
+                isSwitcher = (classes.contains(SWITCHERCLASS) || pClasses.contains(SWITCHERCLASS));
+            if (isSwitcher) {
+                swapResume();
+            }
+        });
+        showResume();
     }
 </script>
 </body>
